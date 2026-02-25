@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yu Chenglin | Personal Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+    
+    <main class="container">
+        <div class="glass-card">
+            <header>
+                <h1 id="name">Yu Chenglin</h1>
+                <p class="tagline">Personal Workspace</p>
+            </header>
+            
+            <section class="time-section">
+                <div id="clock" class="clock">00:00:00</div>
+                <div id="date" class="date">Wednesday, February 25, 2026</div>
+            </section>
+            
+            <footer>
+                <p>Welcome to my personal page</p>
+            </footer>
+        </div>
+    </main>
+
+    <script>
+        function updateTime() {
+            const now = new Date();
+            
+            // Format time
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
+            
+            // Format date
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            document.getElementById('date').textContent = now.toLocaleDateString('en-US', options);
+        }
+
+        // Initial call
+        updateTime();
+        // Update every second
+        setInterval(updateTime, 1000);
+    </script>
+</body>
+</html>
