@@ -19,4 +19,5 @@ A premium personal workspace page featuring a modern glassmorphism design and dy
 ![Personal Page Preview](screenshot.png)
 
 ---
-*Created and deployed with the assistance of Antigravity AI.*
+*Created and deployed with the assistance of Antigravity AI.* 
+
